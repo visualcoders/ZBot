@@ -1,0 +1,1 @@
+from GeometriSolver.Geometri import *
