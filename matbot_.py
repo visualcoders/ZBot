@@ -19,12 +19,11 @@ import numpy as np
 # Konsol üzerinden fonksiyon çağırabiliyoruz
 # Tamamiyle OOP(Object Oriented Programming)(Obje Tabanlı Programlama) ile yazıldı yani takibi ve yeni şeyler eklemesi kolay, hafifte olsa daha hızlı
 
-#Sabitler
-from GeometrySolver import Geometry
+from GeometrySolver import *
 
 if(__name__ == "__main__"):
 
-    YeniCozucu = Geometry.GeometrySolver()
+    YeniCozucu = GeometrySolver()
     fonksiyon = (str(input("Ne Cozmemi Istersiniz: ")).lower()).replace(" ", "").replace("_", "").replace("_", "")#Gereksiz karakterleri kaldırıyor
 
     #Verilen isim adında bir çözücü arayıyor ve bulursa çözüyor
