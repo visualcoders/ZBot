@@ -20,11 +20,11 @@ import numpy as np
 # Tamamiyle OOP(Object Oriented Programming)(Obje Tabanlı Programlama) ile yazıldı yani takibi ve yeni şeyler eklemesi kolay, hafifte olsa daha hızlı
 
 #Sabitler
-from GeometriSolver import *
+from GeometrySolver import Geometry
 
 if(__name__ == "__main__"):
 
-    YeniCozucu = GeometriSolver()
+    YeniCozucu = Geometry.GeometrySolver()
     fonksiyon = (str(input("Ne Cozmemi Istersiniz: ")).lower()).replace(" ", "").replace("_", "").replace("_", "")#Gereksiz karakterleri kaldırıyor
 
     #Verilen isim adında bir çözücü arayıyor ve bulursa çözüyor
@@ -38,6 +38,8 @@ if(__name__ == "__main__"):
         YeniCozucu.DuzgunCokgenCoz()
     elif(fonksiyon == "yamuk"):
         YeniCozucu.YamukCoz()
+    elif(fonksiyon == "eskenardortgen"):
+        YeniCozucu.EskenarDortgenCoz()
     else:
         print("Bunun ne anlama geldiğini bilmiyorum")
 

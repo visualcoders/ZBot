@@ -109,6 +109,29 @@ class Trapezoid():
 
     def Alan(self):
         return (self.a + self.b) / 2 * self.Yukseklik()
+#Eşkenar dörtgen
+class EquilateralQuadrangle():
+    def __init__(self, a_kosegeni, b_kosegeni, bir_kenar_uzunlugu):
+        __name__ = "__EquilateralQuadrangle__"
+        self.ak = a_kosegeni
+        self.bk = b_kosegeni
+        self.bku = bir_kenar_uzunlugu
+
+    def a_kosegeni(self):
+        return self.ak
+
+    def b_kosegeni(self):
+        return self.bk
+
+    def bir_kenar_uzunlugu(self):
+        return self.bku
+
+    def Cevre(self):
+        return self.bku * 4
+
+    def Alan(self):
+        return (self.ak * self.bk)/2
+
 #Geometri Çözücü
 class GeometrySolver():
     def __init__(self):
@@ -167,3 +190,13 @@ class GeometrySolver():
 
         print("Cevre: ", NewTrapezoid.Cevre())
         print("Alan: ", NewTrapezoid.Alan())
+
+    def EskenarDortgenCoz(self):
+        a_kosegeni = float(input("Eskenar Dortgenin A Kosegeni: "))
+        b_kosegeni = float(input("Eskenar Dortgenin B Kosegeni: "))
+        bir_kenar_u = float(input("Eskenar Dortgenin Bir Uzunlugu: "))
+
+        NewEquilateralQuadrangle = EquilateralQuadrangle(a_kosegeni, b_kosegeni, bir_kenar_u)
+
+        print("Cevre: ", NewEquilateralQuadrangle.Cevre())
+        print("Alan: ", NewEquilateralQuadrangle.Alan())
